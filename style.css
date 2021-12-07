@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+}
+
+#bollkalle {
+    width: 50px;
+    height: 100px;
+    background-color: rgb(12, 197, 172);
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.football {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+}
