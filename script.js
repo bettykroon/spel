@@ -1,5 +1,6 @@
 let game = document.getElementById("game");
 let bollkalle = document.getElementById("bollkalle");
+let gameOver = document.getElementById("gameOver");
 
 let bottom = 0;
 let left = 0;
@@ -62,10 +63,11 @@ function addFootball() {
             addFootball();
         }else if (footballTop == 450) {
             console.log("GAME OVER!!!");
+            gameOver.innerText = "GAME OVER!!!";
             clearInterval(move);
         }
 
-    }, 1000);
+    }, 800);
 
     game.append(football);
 }
