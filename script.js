@@ -57,11 +57,12 @@ function addFootball() {
         //console.log(footballTop);
         //console.log(football.style.left);
  
-        if (footballTop == 350 && bollkalle.style.left == football.style.left){
+        if (footballTop == 400 && bollkalle.style.left == football.style.left){
             //console.log("Du fångade!!");
             points++;
             score.innerHTML = "Score: " + points;
             clearInterval(move);
+            football.remove();
             addFootball();
         }else if (footballTop == 450) {
             //console.log("GAME OVER!!!");
