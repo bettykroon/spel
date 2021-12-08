@@ -37,6 +37,28 @@ body {
     border: 1px solid black;
 }
 
+#result {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
 #gameOver {
     text-align: center;
+}
+
+#restart {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+#restart:hover {
+    background-color: rgb(12, 197, 172);
+    color: black;
+    border: 1px solid black;
 }
