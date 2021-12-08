@@ -2,6 +2,7 @@ let game = document.getElementById("game");
 let bollkalle = document.getElementById("bollkalle");
 let gameOver = document.getElementById("gameOver");
 let result = document.getElementById("result");
+let score = document.getElementById("score");
 
 let bottom = 0;
 let left = 0;
@@ -59,28 +60,26 @@ function addFootball() {
         if (footballTop == 350 && bollkalle.style.left == football.style.left){
             //console.log("Du fångade!!");
             points++;
-            let score = document.createElement("h1");
-            score.id = "score";
-            score.innerText = "Score: " + points;
-            result.append(score);
-
+            score.innerHTML = "Score: " + points;
             clearInterval(move);
             addFootball();
         }else if (footballTop == 450) {
             //console.log("GAME OVER!!!");
             gameOver.innerHTML = "GAME OVER!!!";
             clearInterval(move);
+
+            // Skapar en restart knapp
             let restart = document.createElement("button");
             restart.id = "restart";
             restart.innerText = "Restart";
             result.append(restart);
+
+            // om man trycker på knappen så laddas sidan om
             restart.addEventListener("click", function(){
                 location.reload();
             })
         }
-
     }, 800);
-
     game.append(football);
 }
 addFootball();
